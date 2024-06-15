@@ -1,0 +1,235 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+p.display {
+    display: inline-block;
+    background-color: #787d81;
+    color: white;
+    padding: 4px;
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 300ms;
+}
+
+p.display.indicate {
+    color: gold;
+    background-color: green;
+    box-shadow: 0px 0px 10px goldenrod;
+}
+
+p.display.indicate-red {
+    color: black;
+    background-color: red;
+    box-shadow: 0px 0px 10px red;
+}
+
+/*card style*/
+div.card {
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 1%;
+    font-weight: bold;
+    width: 10%;
+    box-shadow: 1px 1px 2px black;
+    position: relative;
+}
+
+div.card p {
+    font-size: 120%;
+    font-family: "Arial";
+    text-align: left;
+}
+
+div.card p img {
+    width: 25%;
+    float: right;
+}
+
+div.card > img {
+    display: block;
+    width: 70%;
+    margin: 15% auto 10% auto;
+}
+
+div.card.hidden {
+    background-color: skyblue;
+}
+
+/*div.card:before {
+    border-radius: inherit;
+    color: skyblue;
+    background-color: skyblue;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    border: 5px double dodgerblue;
+    content: "0";
+    display: attr(data-blind-display);
+}*/
+/*end card style*/
+
+/*message box style*/
+#msgBox {
+    display: inline-block;
+    color: black;
+    background-color: rgba(192, 192, 192, 0.938);
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    top: 20%;
+    padding: 1%;
+    min-height: 50%;
+    box-shadow: 0px 0px 10px black;
+}
+
+#msgBox h2 {
+    text-align: center;
+    font-size: 200%;
+    color: green;
+    text-shadow: 0px 0px 10px greenyellow;
+}
+
+#msgBox p {
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+#msgBox div {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 2%;
+}
+
+#msgBox button {
+    font-family: inherit;
+    font-size: 90%;
+    border: 3px outset silver;
+}
+
+#msgBox button:active {
+    border-style: inset;
+}
+/*end message box style*/
+
+#table {
+    background-image: linear-gradient(to bottom, #09b386, #057e5d );
+    display: inline-block;
+    width: 800px;
+    height: 600px;
+    position: relative;
+    font-size: 18px;
+    font-family: "Fregat", 'Times New Roman', Times, serif;
+}
+
+#pult, #dealerInfo {
+    background-image: linear-gradient(to right, silver, rgb(214, 214, 214), silver);
+    padding: 0.8%;
+}
+
+#pult > *, #dealerInfo > * {
+    vertical-align: middle;
+}
+
+#pult img, #dealerInfo img {
+    width: 5%;
+}
+
+#pult {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#pult .pultBtns {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 1.2%;
+}
+
+#pult button {
+    color: rgb(129, 84, 0);
+    background-color: rgba(251, 255, 0, 0.281);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 3px outset orange;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5% 1%;
+}
+
+#pult button:active:not(:disabled) {
+    border-style: inset;
+    background-color: gold;
+}
+
+#pult button:disabled {
+    border-color: silver;
+    border-style: solid;
+}
+
+#dealerPool, #playerPool {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+}
+
+#dealerPool {
+    top: 20%;
+}
+
+#playerPool {
+    bottom: 20%;
+}
+
+#dealerPoolPower, #playerPoolPower {
+    display: inline;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5%;
+    border-radius: 30px;
+    border: 1px solid black;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+#dealerPoolPower.bust, #playerPoolPower.bust {
+    background-color: rgba(255, 0, 0, 0.685);
+}
+
+#dealerPoolPower.bj, #playerPoolPower.bj {
+    color: goldenrod;
+    background-color: rgba(255, 217, 0, 0.479);
+}
+
+#dealerPoolPower.draw, #playerPoolPower.draw {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#dealerPoolPower.advan, #playerPoolPower.advan {
+    color: gold;
+    background-color: rgba(0, 128, 0, 0.5);
+}
+
+#dealerCards li, #playerCards li {
+    display: inline;
+    margin: 0 0.5%;
+}

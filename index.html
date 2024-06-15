@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Blackjack</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="icon" href="icon.png">
+    </head>
+    <body>
+        <div id="table">
+            <div id="dealerInfo">
+                <img src="img/dealer.png" title="Dealer" alt="Dealer">
+                <p id="dealerScore" class="display">Score: 3</p>
+                <p id="cardsCount" class="display">Cards count: 54</p>
+            </div>
+            <div id="dealerPool">
+                <ui id="dealerCards">
+                    <li><div class="card"><p>7<img src="img/diamonds.png"></p><img src="img/diamonds.png"></div></li>
+                    <li><div class="card"><p>2<img src="img/clubs.png"></p><img src="img/clubs.png"></div></li>
+                    <li><div class="card"><p>3<img src="img/hearts.png"></p><img src="img/hearts.png"></div></li>
+                    <li><div class="card"><p>4<img src="img/spades.png"></p><img src="img/spades.png"></div></li>
+                </ui>
+                <p id="dealerPoolPower">21</p>
+            </div>
+            <div id="playerPool">
+                <ui id="playerCards">
+                    <li><div class="card"><p>7<img src="img/diamonds.png"></p><img src="img/diamonds.png"></div></li>
+                    <!-- <li><div class="card"><p>7<img src="img/diamonds.png"></p><img src="img/diamonds.png"></div></li>
+                    <li><div class="card"><p>7<img src="img/diamonds.png"></p><img src="img/diamonds.png"></div></li> -->
+                </ui>
+                <p id="playerPoolPower">21</p>
+            </div>
+            <div id="pult">
+                <div class="pultBtns">
+                    <button id="btnHit">HIT</button>
+                    <button id="btnStand">STAND</button>
+                </div>
+                <img src="img/player.png" title="Player" alt="Player">
+                <p id="playerScore" class="display">Score: 4</p>
+            </div>
+
+            <!--Message box dlg-->
+            <div id="msgBox">
+                <h2>Blackjack</h2>
+                <p>To start new game press OK</p>
+                <div>
+                    <button id="msgBoxAcceptBtn">OK</button>
+                    <button id="msgBoxRejectBtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/bj_shared.js"></script>
+        <script src="js/bj_game.js"></script>
+    </body>
+</html>
